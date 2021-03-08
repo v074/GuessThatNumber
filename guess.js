@@ -43,12 +43,14 @@ while (restartGame) {
     // Continues to loop through until the user guesses the correct number or runs out of attempts.  Loops until a BREAK.
     while (true) {
 
-        // Attempts to convert the user's guess into a numerical value.
-        
+        // Special Case: Password entry
         if(guess===`You Shall Be As Gods`){
+            // Displays the random number.  You bloody cheater.
             alert(`The number is ${randomNum}`);
             guess = prompt(`Please enter a guess between 1 and ${rangeNum}.  You have ${attempts} attempt(s) left.`);
         }
+
+        // Attempts to convert the user's guess into a numerical value.
         guess = parseInt(guess);
         
         // Verifies that the guess is a number that is within the range set.
